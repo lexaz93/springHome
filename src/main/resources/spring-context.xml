@@ -8,5 +8,16 @@
         <constructor-arg value="Arabic"/>
     </bean>
 
+    <bean id="milk" class="CoffeeShop.Milk">
+    </bean>
+
+    <bean id="cream" class="CoffeeShop.Cream">
+    </bean>
+
+    <bean id="milkCoffee" class="CoffeeShop.MilkCoffee">
+        <constructor-arg ref="coffee"/>
+        <constructor-arg ref="milk"/>
+    </bean>
+
 
 </beans>

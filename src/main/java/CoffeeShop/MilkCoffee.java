@@ -1,16 +1,16 @@
 package CoffeeShop;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
 public class MilkCoffee {
     private Coffee coffee;
     private Milkable milkable;
 
-    public MilkCoffee(Coffee coffee, Milkable milkable) {
-        this.coffee = coffee;
-        this.milkable = milkable;
+    @Override
+    public String toString() {
+        return coffee + " + " + milkable.getClass().toString().split("\\.")[1];
     }
-
-    public MilkCoffee(Coffee coffee){
-        this.coffee = coffee;
-    }
-
 }
