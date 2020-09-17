@@ -1,4 +1,4 @@
-package CoffeeShop;
+package coffeeshop;
 
 public interface Milkable {
     double getPercentage();
