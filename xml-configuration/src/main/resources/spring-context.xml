@@ -4,22 +4,22 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="coffee" class="coffeeshop.Coffee">
+    <bean id="coffee" class="coffeeshop.domain.Coffee">
         <constructor-arg value="Arabic"/>
     </bean>
 
-    <bean id="milk" class="coffeeshop.Milk">
+    <bean id="milk" class="coffeeshop.domain.Milk">
     </bean>
 
-    <bean id="cream" class="coffeeshop.Cream">
+    <bean id="cream" class="coffeeshop.domain.Cream">
     </bean>
 
-    <bean id="milkCoffee" class="coffeeshop.MilkCoffee">
+    <bean id="milkCoffee" class="coffeeshop.domain.MilkCoffee">
         <constructor-arg ref="coffee"/>
         <constructor-arg ref="milk"/>
     </bean>
 
-    <bean id="coffeeService" class="coffeeshop.CoffeeService">
+    <bean id="coffeeService" class="coffeeshop.service.CoffeeService">
         <constructor-arg ref="coffee"/>
         <constructor-arg ref="milkCoffee"/>
     </bean>
