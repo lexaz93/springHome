@@ -1,8 +1,10 @@
-package CoffeeShop;
+package coffeeshop;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 @AllArgsConstructor
+@Data
 public class Coffee {
     private String type;
 

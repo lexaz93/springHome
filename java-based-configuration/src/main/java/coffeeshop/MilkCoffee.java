@@ -1,10 +1,10 @@
-package CoffeeShop;
+package coffeeshop;
 
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@Getter
 public class MilkCoffee {
     private Coffee coffee;
     private Milkable milkable;

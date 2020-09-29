@@ -1,10 +1,17 @@
-package CoffeeShop;
+package coffeeshop;
 
-import org.springframework.context.ApplicationContext;
 import java.util.Scanner;
 
 public class CoffeeService {
-    public static void start(ApplicationContext context){
+    private Coffee coffee;
+    private MilkCoffee milkCoffee;
+
+    public CoffeeService(Coffee coffee, MilkCoffee milkCoffee) {
+        this.coffee = coffee;
+        this.milkCoffee = milkCoffee;
+    }
+
+    public void start(){
         System.out.println("Hello!\nChoose your coffee: with milk or original?");
 
         Scanner scanner = new Scanner(System.in);
@@ -13,10 +20,8 @@ public class CoffeeService {
         System.out.println("Your chose: " + type);
 
         if (type.toLowerCase().contains("milk")) {
-            MilkCoffee milkCoffee = context.getBean(MilkCoffee.class);
             System.out.println("Your own milk coffee: " + milkCoffee.toString());
         } else {
-            Coffee coffee = context.getBean(Coffee.class);
             System.out.println("Your own original coffee: " + coffee.toString());
         }
     }

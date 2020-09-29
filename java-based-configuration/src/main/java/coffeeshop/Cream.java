@@ -1,4 +1,4 @@
-package CoffeeShop;
+package coffeeshop;
 
 public class Cream implements Milkable {
     @Override
