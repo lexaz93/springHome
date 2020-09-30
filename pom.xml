@@ -13,6 +13,7 @@
         <module>java-based-configuration</module>
         <module>annotation-based-configuration</module>
         <module>aop</module>
+        <module>eviscerator-part-1</module>
     </modules>
 
     <properties>
